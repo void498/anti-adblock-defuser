@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Anti-Adblock Defuser",
+  "version": "1.0",
+  "description": "Defuses anti-adblock detection scripts and modal overlays.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["defuser.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
